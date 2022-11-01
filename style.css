@@ -51,6 +51,10 @@ body {
   letter-spacing: 10px;
   text-transform: uppercase;
   margin-bottom: 10px;
+  animation-name: leftToRight;
+  animation-duration: 1.7s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease;
 }
 .title-first__secondary {
   display: block;
@@ -58,6 +62,37 @@ body {
   font-size: 40px;
   line-height: 48px;
   letter-spacing: 5px;
+  animation-name: rightToLeft;
+  animation-duration: 1.7s;
+  animation-timing-function: ease;
+  animation-delay: 0.3s;
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
