@@ -70,6 +70,8 @@ body {
   position: absolute;
   left: 5rem;
   top: 5rem;
+  pointer-events: none;
+  user-select: none;
 }
 .header__box {
   position: absolute;
