@@ -1,9 +1,13 @@
 $color-grey: #777777
-$color-grey-light: #F7F7F7
 $color-white: #ffffff
 $color-black: #000000
 $color-brown-light: #BA8554
 $color-brown-dark: #A14F03
+
+@mixin animation-settings($name, $timing-function)
+  animation: $name 1.7s $timing-function .3s backwards
+  backface-visibility: hidden
+
 
 *, ::after, ::before
   margin: 0
@@ -14,7 +18,7 @@ html
   font-size: 62.5%
 
 body
-  font-family: "Roboto"
+  font-family: "Roboto", sans-serif
   font-weight: 400
   color: $color-grey
   font-size: 1.6rem
@@ -23,7 +27,7 @@ body
   background-color: $color-white
 
 .container
-  background-color: $color-grey-light
+  background-color: #f7f7f7
 
 .header
   height: 95vh
@@ -54,25 +58,15 @@ body
     letter-spacing: 1rem
     text-transform: uppercase
     margin-bottom: 1rem
-    animation-name: leftToRight
-    animation-duration: 1.7s
-    animation-delay: .3s
-    animation-timing-function: ease
-    backface-visibility: hidden
-    animation-fill-mode: backwards
+    @include animation-settings(leftToRight, ease)
   &__secondary
     display: block
     font-weight: 100
     font-size: 4rem
     line-height: 4.8rem
     letter-spacing: .5rem
-    animation-name: rightToLeft
-    animation-duration: 1.7s
-    animation-timing-function: ease
-    animation-delay: .3s
-    backface-visibility: hidden
     margin-bottom: 5rem
-    animation-fill-mode: backwards
+    @include animation-settings(rightToLeft, ease)
 
 .btn
   &:link, &:visited
@@ -107,8 +101,7 @@ body
     z-index: -1
     transition: all .5s
   &_animated
-    animation: btnToUp 1.7s ease-out 0.3s
-    animation-fill-mode: backwards
+    @include animation-settings(btnToUp, ease-out)
 
 
 @keyframes btnToUp
