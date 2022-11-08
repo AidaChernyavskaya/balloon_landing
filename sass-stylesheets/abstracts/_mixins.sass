@@ -1,3 +1,9 @@
 @mixin animation-settings($name, $timing-function)
   animation: $name 1.7s $timing-function .3s backwards
   backface-visibility: hidden
+
+@mixin clearfix
+  &::after
+    content: ""
+    display: table
+    clear: both
