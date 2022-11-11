@@ -52,7 +52,6 @@
 
 .row {
   max-width: 114rem;
-  background-color: crimson;
   margin: 0 auto;
 }
 .row::after {
@@ -65,7 +64,6 @@
 }
 
 [class^=col-] {
-  background-color: greenyellow;
   float: left;
 }
 [class^=col-]:not(:last-child) {
@@ -212,7 +210,7 @@ body {
 
 .btn-text:link, .btn-text:visited {
   text-decoration: none;
-  color: #777777;
+  color: #BA8554;
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
@@ -279,6 +277,38 @@ body {
   font-weight: 400;
   letter-spacing: 0.2rem;
   line-height: 140%;
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 55%;
+  position: absolute;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  z-index: 10;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+.composition__photo_n1 {
+  top: 0;
+  left: 0;
+}
+.composition__photo_n2 {
+  top: 8rem;
+  right: 0;
+}
+.composition__photo_n3 {
+  top: 16rem;
+  left: 2rem;
+}
+.composition__photo:hover {
+  transform: scale(1.1);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
 }
 
 /*# sourceMappingURL=style.css.map */
