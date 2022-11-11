@@ -189,3 +189,25 @@ body
       z-index: 20
   &:hover &__photo:not(:hover)
     transform: scale(.95)
+
+.section-adventure
+  padding: 21rem 0
+  background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(./images/section-adventure-background.jpg) center / cover no-repeat
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%)
+
+.adventure-card
+  background-color: rgba($color-white, .8)
+  border-radius: .5rem
+  padding: 2.2rem
+  text-align: center
+  box-shadow: $shadow
+  transition: all .5s
+  &__icon
+    font-size: 6rem
+    background: linear-gradient(90deg, $color-brown-light 3.65%, $color-brown-dark 100%)
+    -webkit-background-clip: text
+    color: transparent
+    display: inline-block
+  &:hover
+    transform: scale(1.05)
+    background-color: $color-white
