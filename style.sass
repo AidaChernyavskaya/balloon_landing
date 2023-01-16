@@ -460,4 +460,32 @@ body
   &__input-radio:checked ~ &__label-radio &__button-radio::after
     opacity: 1
 
+.footer
+  background-color: #333333
+  padding: 8rem
+  &__logo
+    width: 12rem
+    height: 15.1rem
+    transition: all .3s ease
+    &:hover
+      transform: scale(1.05)
+  &__list
+    text-decoration: none
+  &__item
+    display: inline-block
+    &:not(:last-child)
+      margin-right: 5rem
+  &__link
+    &:link, &:visited
+      text-decoration: none
+      color: $color-white
+      font-weight: 300
+      font-size: 1.6rem
+      transition: all .3s
+      text-transform: uppercase
+      display: inline-block
+    &:hover
+      transform: scale(1.1)
+
+
 
