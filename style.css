@@ -176,6 +176,11 @@ body {
   padding: 5rem;
   background-color: #ffffff;
 }
+@media only screen and (max-width: 900px) {
+  body {
+    padding: 1rem;
+  }
+}
 
 .container {
   background-color: #f7f7f7;
